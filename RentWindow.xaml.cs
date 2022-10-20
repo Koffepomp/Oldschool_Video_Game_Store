@@ -39,7 +39,7 @@ namespace Oldschool_Video_Game_Store
 
         private void btnRate_Click(object sender, RoutedEventArgs e)
         {
-            // bara för att kunna få upp add fönstret
+            // test bara för att kunna få upp add fönstret
             btnAddToLibrary.IsEnabled = true;
         }
 
