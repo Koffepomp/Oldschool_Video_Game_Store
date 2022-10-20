@@ -2,5 +2,12 @@
 {
     public enum MovieGenres
     {
+        Action,
+        Comedy,
+        Horror,
+        Scifi,
+        Drama,
+        Fantasy,
+        Mystery
     }
 }

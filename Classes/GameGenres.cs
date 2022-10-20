@@ -2,5 +2,10 @@
 {
     public enum GameGenres
     {
+        FPS,
+        RPG,
+        Fightning,
+        Survival,
+        Strategy
     }
 }

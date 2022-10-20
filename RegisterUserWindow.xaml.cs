@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace Oldschool_Video_Game_Store
 {
@@ -7,14 +8,24 @@ namespace Oldschool_Video_Game_Store
     /// </summary>
     public partial class RegisterUserWindow : Window
     {
-        public RegisterUserWindow()
+        StoreManager StoreManager;
+        public RegisterUserWindow(StoreManager storeManager)
         {
             InitializeComponent();
+            StoreManager = storeManager;
         }
 
         private void btnRegisterUser_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Register complete! Please sign in.");
+            try
+            {
+                StoreManager.CreateCustomer(tbUsername.Text, tbPassword.Text, Convert.ToInt32(tbAge.Text));
+                MessageBox.Show("Register complete! Please sign in.");
+            }
+            catch
+            {
+                MessageBox.Show("Flopp");
+            }
             Close();
         }
     }
